@@ -127,6 +127,11 @@ for i in range(0,x):
   a=prediction_model[i][0][0]
   c.append(a)  
 c = [0 if ele<0 else ele for ele in c]
+d=[]
+for i in range(0,x):
+  b=y_test[i][0][0]
+  d.append(b)  
+d = [0 if ele<0 else ele for ele in d]
 st.success('ON THE WAY..... ')
 
 # from sklearn.metrics import mean_squared_error
@@ -203,10 +208,10 @@ test_data = test_data.reset_index()
 # st.pyplot(plt)
 #print(len(test_data))
 # #st.markdown(solar)
-new=test_data.iloc[720:,1]
-x = test_data.columns[1]
-#print("aha = ",x)
-list1 = test_data[x].values.tolist()
+# new=test_data.iloc[720:,1]
+# x = test_data.columns[1]
+# #print("aha = ",x)
+# list1 = test_data[x].values.tolist()
 #print(len(list1))
 
 # plt.plot(RMSE_Test, label='RMSE of Test', color='green', linewidth =2)
@@ -230,7 +235,7 @@ list1 = test_data[x].values.tolist()
 # # #plot individual lines
 #st.dataframe(new)
 plt.plot(c, label='pred', color='black', linewidth =2)
-plt.plot(list1[720:-46], label='ori', color='Brown', linewidth =1)
+plt.plot(d, label='ori', color='Brown', linewidth =1)
 plt.legend()
 plt.xlabel('sample')
 plt.ylabel('MW')
