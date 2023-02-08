@@ -241,6 +241,7 @@ plt.show()
 # ax4.set_ylabel("Residuals"); # set the y-label for residuals
 st.pyplot(plt)
 distribution=sum(c[-24:])
+st.markdown(" ## The sum of the estimated solar power for the next 24 samples is {} {} .".format(round(distribution),unit))
 if unit=='MWh':
      tt=round(time*distribution*1000)
 elif unit=='Wh' :
