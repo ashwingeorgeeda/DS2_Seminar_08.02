@@ -230,7 +230,7 @@ list1 = test_data[x].values.tolist()
 # # #plot individual lines
 #st.dataframe(new)
 plt.plot(c, label='pred', color='black', linewidth =2)
-plt.plot(list1[720:], label='ori', color='Brown', linewidth =1)
+plt.plot(list1[720:-46], label='ori', color='Brown', linewidth =1)
 plt.legend()
 plt.xlabel('sample')
 plt.ylabel('MW')
